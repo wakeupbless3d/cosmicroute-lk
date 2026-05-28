@@ -350,7 +350,7 @@ function doLogin() {
         loadDashboard();
         toast('Добро пожаловать!', 'success');
       } else {
-        throw new Error(data.message || 'Ошибка входа');
+        throw new Error(data.error || data.message || 'Ошибка входа');
       }
     })
     .catch(function(e) {
